@@ -26,11 +26,11 @@ $(function () {
   // current hour in 24-hour time?
   for (let i = 9; i < 18; i++) {
     let hourID = $('#hour-' + [i]);
-    if (dayjs().hour(i).isAfter(dayjs())) {
+    if (dayjs().hour(i).isAfter(dayjs().hour(13))) {
       // if the i hour is after right now, give future class
       hourID.addClass("future");
 
-    } else if (dayjs().hour(i).isBefore(dayjs())) {
+    } else if (dayjs().hour(i).isBefore(dayjs().hour(13))) {
       hourID.addClass("past");
 
     } else {
